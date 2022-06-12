@@ -5,7 +5,7 @@
 
 
 def number_checker(question):
-    error = "\nSorry, you must enter an integer\n"
+    error = "Sorry, you must enter an integer"
     number = ""
     while not number:
         try:
