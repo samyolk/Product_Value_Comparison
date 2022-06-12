@@ -15,8 +15,8 @@ def get_product_name(question):
         if not response:
             print("You can't leave this blank")
         elif len(response) <= 3:
-            confirm = input("Your response seems to be quite short, are you"
-                  " sure this is what you want? (Y/N) ").lower()
+            confirm = input("Your response seems to be quite short, are you "
+                            "sure this is what you want? (Y/N) ").lower()
             y_or_n = False
             while y_or_n is False:
                 if confirm == "y":
