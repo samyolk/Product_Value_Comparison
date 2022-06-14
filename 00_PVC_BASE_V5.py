@@ -142,12 +142,12 @@ def get_product_details():
 
 # -------------Main Routine------------- #
 # Getting maximum budget
-get_max_budget("Enter your maximum budget: ", "Your max budget is: $")
+get_max_budget("Enter your maximum budget: $", "Your max budget is: $")
 
 # Loop code for inputting multiple products
 while loop is True:
 
-    get_product_name("\nEnter the product name : ")  # Calling get_product_name
+    get_product_name("\nEnter the product name: ")  # Calling get_product_name
     num_of_products += 1
     # calling the get product details function
     get_product_details()
@@ -208,8 +208,8 @@ product_number = 0
 recommended_product_price = product_unit_prices[product_number]
 while product_number < len(product_unit_prices):
     if recommended_product_price > product_unit_prices[product_number]:
-        recommended_product_price = product_number
         recommended_product = product_number
+        recommended_product_price = product_unit_prices[product_number]
     product_number += 1
 product_number -= 1
 if all_product_details[recommended_product][2] > max_budget:
@@ -217,6 +217,6 @@ if all_product_details[recommended_product][2] > max_budget:
           "unit prices exceed your maximum budget.")
 else:
     print("\nThe recommended product is: ",
-          all_product_details[product_number][0], "at $",
-          all_product_details[product_number][2])
+          all_product_details[recommended_product][0], "at $",
+          all_product_details[recommended_product][2])
 print("\n----------------------------------------")
